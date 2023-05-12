@@ -5,6 +5,10 @@ library(forecast)
 # Read in the data
 genome_s <- read.csv("sequencing-costs.csv")
 
+head(genome_s)
+dim(genome_s)
+str(genome_s)
+
 # Convert the date column to a date format
 genome_s$Date <- as.Date(genome_s$Date, format = "%Y-%m-%d")
 

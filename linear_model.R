@@ -21,10 +21,6 @@ predicted <- predict(model)
 residuals <- genome_s$Cost.per.Genome - predicted
 
 
-
-
-
-
 # Calculate R-squared
 SSR <- sum((predicted - mean(genome_s$Cost.per.Genome))^2)
 SSE <- sum(residuals^2)

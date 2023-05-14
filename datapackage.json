@@ -1,0 +1,185 @@
+{
+  "bytes": 9172,
+  "datahub": {
+    "created": "2017-11-09T00:43:36.429030",
+    "findability": "published",
+    "flowid": "core/genome-sequencing-costs/8",
+    "modified": "2018-03-15T06:19:57.587552",
+    "owner": "core",
+    "ownerid": "core"
+  },
+  "description": "For many years, the National Human Genome Research Institute (NHGRI) has tracked the costs associated with DNA sequencing performed at the sequencing centers funded by the Institute. This information has served as an important benchmark for assessing improvements in DNA sequencing technologies and for establishing the DNA sequencing capacity of the NHGRI Genome Sequencing Program (GSP). Here, NHGRI provides an analysis of these data, which gives one view of the remarkable improvements in DNA sequencing technologies and data-production pipelines in recent years.",
+  "hash": "41ba52586cf43babc204528e14b1063a",
+  "homepage": "http://www.genome.gov/sequencingcosts/",
+  "id": "core/genome-sequencing-costs",
+  "license": "ODC-PDDL-1.0",
+  "name": "genome-sequencing-costs",
+  "resources": [
+    {
+      "bytes": 1387,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/75113dd9eba3fba5aa84f695e56c27eb.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "sequencing-costs_original",
+      "path": "archive/sequencing-costs.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "description": "Date format YYYY-MM",
+            "format": "any",
+            "name": "Date",
+            "type": "date"
+          },
+          {
+            "description": "The cost of determining one megabase (Mb; a million bases) of DNA sequence of a specified quality",
+            "name": "Cost per Mb",
+            "type": "number"
+          },
+          {
+            "description": "The cost of sequencing a human-sized genome",
+            "name": "Cost per Genome",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 461,
+      "datahub": {
+        "type": "derived/report"
+      },
+      "description": "Validation report for tabular data",
+      "dpp:streamedFrom": "/tmp/tmp3v2e_cca/core/genome-sequencing-costs/validation_report/data/d7f9fd8932552aabf3ae30157bc834ac/validation_report.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "d7f9fd8932552aabf3ae30157bc834ac",
+      "name": "validation_report",
+      "path": "data/validation_report.json",
+      "profile": "data-resource"
+    },
+    {
+      "bytes": 1596,
+      "datahub": {
+        "derivedFrom": [
+          "sequencing-costs"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmp3v2e_cca/core/genome-sequencing-costs/sequencing-costs_csv/data/91fdf8dd7875636b15911d1f66b7baa9/sequencing-costs_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "91fdf8dd7875636b15911d1f66b7baa9",
+      "mediatype": "text/csv",
+      "name": "sequencing-costs_csv",
+      "path": "data/sequencing-costs_csv.csv",
+      "profile": "data-resource",
+      "rowcount": 52,
+      "schema": {
+        "fields": [
+          {
+            "description": "Date format YYYY-MM",
+            "format": "%Y-%m-%d",
+            "name": "Date",
+            "type": "date"
+          },
+          {
+            "decimalChar": ".",
+            "description": "The cost of determining one megabase (Mb; a million bases) of DNA sequence of a specified quality",
+            "groupChar": "",
+            "name": "Cost per Mb",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "description": "The cost of sequencing a human-sized genome",
+            "groupChar": "",
+            "name": "Cost per Genome",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 3997,
+      "datahub": {
+        "derivedFrom": [
+          "sequencing-costs"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmp3v2e_cca/core/genome-sequencing-costs/sequencing-costs_json/data/ed8d263650bef11f4db982c12d558ca2/sequencing-costs_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "ed8d263650bef11f4db982c12d558ca2",
+      "mediatype": "text/csv",
+      "name": "sequencing-costs_json",
+      "path": "data/sequencing-costs_json.json",
+      "profile": "data-resource",
+      "rowcount": 52,
+      "schema": {
+        "fields": [
+          {
+            "description": "Date format YYYY-MM",
+            "format": "%Y-%m-%d",
+            "name": "Date",
+            "type": "date"
+          },
+          {
+            "description": "The cost of determining one megabase (Mb; a million bases) of DNA sequence of a specified quality",
+            "name": "Cost per Mb",
+            "type": "number"
+          },
+          {
+            "description": "The cost of sequencing a human-sized genome",
+            "name": "Cost per Genome",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 1731,
+      "dpp:streamedFrom": "/tmp/tmp8j9ip4lo/README.md",
+      "format": "md",
+      "name": "readme",
+      "path": "README.md"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Sequencing Cost Table",
+      "title": "Sequencing Cost Table",
+      "web": "http://www.genome.gov/pages/der/sequencing_costs_oct2015.xlsx"
+    }
+  ],
+  "title": "Costs assosiated with DNA sequencing since 2001",
+  "version": "oct2015",
+  "views": [
+    {
+      "name": "graph",
+      "spec": {
+        "group": "Date",
+        "series": [
+          "Cost per Genome"
+        ],
+        "type": "lines-and-points"
+      },
+      "specType": "simple",
+      "title": "The cost of sequencing a human-sized genome"
+    }
+  ]
+}
